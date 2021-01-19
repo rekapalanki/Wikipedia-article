@@ -24,67 +24,100 @@
 <body>
 
     <aside>
-        <div class="mobile-sidebar mobile"></div>
+        <div class="mobile-sidebar mobile">
+            <div class="mobile-navigation-content mobile">
+                <a href="#" class="mobile-sidebar-navigation-link">Home</a>
+                <a href="#" class="mobile-sidebar-navigation-link">Random</a>
+                <a href="#" class="mobile-sidebar-navigation-link">Nearby</a>
+            </div>
+            <div class="mobile-navigation-content mobile">
+                <a href="#" class="mobile-sidebar-navigation-link">Log in</a>
+            </div>
+            <div class="mobile-navigation-content mobile">
+                <a href="#" class="mobile-sidebar-navigation-link">Settings</a>
+            </div>
+            <div class="mobile-navigation-content mobile">
+                <a href="#" class="mobile-sidebar-navigation-link">Donate</a>
+            </div>
+            <div class="mobile-about">
+                <ul class="mobile-about-list">
+                    <li>About Wikipedia</li>
+                    <li>Disclaimers</li>
+                </ul>
+            </div>
+        </div>
         <div class="desktop-sidebar-header desktop"></div>
         <div class="desktop-sidebar desktop">
             <figure class="logo">
-                <img src="" alt="wikipedia-logo">
-                <p class="wikipedia-sign"></p>
-                <p class="wikipedia-sign-tagline"></p>
+                <img src="./public/Wikipedia-logo-v2.svg" alt="wikipedia-logo">
+                <p class="wikipedia-sign">Wikipedia</p>
+                <p class="wikipedia-sign-tagline">The Free Encyclopedia</p>
             </figure>
             <nav class="sidebar-navigation-wrapper">
-                <div id="navigation-main">
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
+                <div class="navigation-content" id="navigation-main">
+                    <a href="" class="sidebar-navigation-link">Main page</a>
+                    <a href="" class="sidebar-navigation-link">Contents</a>
+                    <a href="" class="sidebar-navigation-link">Current events</a>
+                    <a href="" class="sidebar-navigation-link">Random Article</a>
+                    <a href="" class="sidebar-navigation-link">About Wikipedia</a>
+                    <a href="" class="sidebar-navigation-link">Contact us</a>
+                    <a href="" class="sidebar-navigation-link">Donate</a>
                 </div>
-                <div id="navigation-contribute">
-                    <p class="sidebar-heading"></p>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
+                <div class="navigation-content" id="navigation-contribute">
+                    <p class="sidebar-heading">Contribute</p>
+                    <a href="" class="sidebar-navigation-link">Help</a>
+                    <a href="" class="sidebar-navigation-link">Learn to edit</a>
+                    <a href="" class="sidebar-navigation-link">Community portal</a>
+                    <a href="" class="sidebar-navigation-link">Recent changes</a>
+                    <a href="" class="sidebar-navigation-link">Upload file</a>
                 </div>
-                <div class="navigation-tools">
-                    <p class="sidebar-heading"></p>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
+                <div class="navigation-content" id="navigation-tools">
+                    <p class="sidebar-heading">Tools</p>
+                    <a href="" class="sidebar-navigation-link">What links here</a>
+                    <a href="" class="sidebar-navigation-link">Related changes</a>
+                    <a href="" class="sidebar-navigation-link">Special pages</a>
+                    <a href="" class="sidebar-navigation-link">Permanent link</a>
+                    <a href="" class="sidebar-navigation-link">Page information</a>
+                    <a href="" class="sidebar-navigation-link">Cite this page</a>
+                    <a href="" class="sidebar-navigation-link">Wikipedia item</a>
                 </div>
-                <div class="navigation-print-export">
-                    <p class="sidebar-heading"></p>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
+                <div class="navigation-content" id="navigation-print-export">
+                    <p class="sidebar-heading">Print/export</p>
+                    <a href="" class="sidebar-navigation-link">Download as PDF</a>
+                    <a href="" class="sidebar-navigation-link">Printable version</a>
                 </div>
-                <div class="navigation-languages">
-                    <p class="sidebar-heading"></p>
-                    <a href="" class="sidebar-navigation-link"></a>
-                    <a href="" class="sidebar-navigation-link"></a>
+                <div class="navigation-content" id="navigation-languages">
+                    <p class="sidebar-heading">Languages</p><i id="language-settings-button" class="fas fa-cog"></i>
+                    <a href="" class="sidebar-navigation-link">Español</a>
+                </div>
+                <div class="navigation-content" id="edit-links">
+                    <p id="edit-links-item"><i class="fas fa-pen">Edit links</i></p>
                 </div>
             </nav>
         </div>
     </aside>
 
     <head>
-        <div class="mobile-header mobile"></div>
+        <div class="mobile-header-wrapper mobile">
+            <button class="mobile-header-button mobile mobile-header header-button"><i class="fas fa-bars"></i></button>
+            <p id="mobile-header-wikipedia-sign mobile mobile-header header-wikipedia-sign">Wikipedia</p>
+            <i class="fas fa-search" class="mobile-search-icon mobile mobile-header"></i>
+        </div>
         <div class="desktop-header desktop">
-            <div class="account-line"></div>
+            <div class="account-line-wrapper">
+                <a href="#" class="account-line"><i class="fas fa-user"></i> Not logged in</a>
+                <a href="#" class="account-line">Talk</a>
+                <a href="#" class="account-line">Contributions</a>
+                <a href="#" class="account-line">Create account</a>
+                <a href="#" class="account-line">Log in</a>
+            </div>
             <div class="edit-line">
-                <div class="active-edit-tag"></div>
-                <div class="edit-tab"></div>
-                <div class="edit-tab"></div>
-                <div class="edit-tab"></div>
-                <div class="edit-tab"></div>
-                <div class="searchbar"></div>
+                <a class="active-edit-tab">Article</a>
+                <a class="edit-tab">Talk</a>
+                <a class="active-edit-tab">Read</a>
+                <a class="edit-tab">Edit</a>
+                <a class="edit-tab">View history</a>
+                <div class="searchbar">Search Wikipedia <i class="fas fa-search"></i></div>
             </div>
         </div>
     </head>
@@ -102,13 +135,18 @@
 
             <div class="article-wrapper">
                 <div class="box" id="infobox"></div>
-                <section class="paragraph-summary">Communist Mutants from Space is a fixed shooter video game programmed
-                    by Stephen H. Landrum for the Atari 2600 with the Starpath Supercharger cassette accessory. It was
-                    published in 1982 by Starpath (formerly Arcadia).[2] The game is similar to Galaxian,[3] adding a
-                    variety of gameplay-changing options.</section>
+                <section class="paragraph-summary"><em><strong>Communist Mutants from Space</strong></em> is a
+                    <a href="https://en.wikipedia.org/wiki/Fixed_shooter">fixed shooter</a> video game programmed by
+                    Stephen H. Landrum for the <a href="https://en.wikipedia.org/wiki/Atari_2600">Atari 2600</a> with
+                    the <a href="https://en.wikipedia.org/wiki/Starpath_Supercharger">Starpath Supercharger</a> cassette
+                    accessory. It was published in 1982 by <a href="https://en.wikipedia.org/wiki/Starpath">Starpath</a>
+                    (formerly Arcadia). <sup><a href="#ref-2">[2]</a></sup> The game is similar to
+                    <em><a href="https://en.wikipedia.org/wiki/Galaxian">Galaxian</a></em>,
+                    <sup><a href="#ref-3">[3]</a></sup> adding a variety of gameplay-changing options.
+                </section>
                 <div class="box" id="contents">
                     <p class="contents-heading">Contents</p>
-                    <p>[<a href="#">hide</a>]</p>
+                    <p class="desktop-brackets desktop">[<a href="#">hide</a>]</p>
                     <ol>
                         <li>Plot</li>
                         <li><a href="gameplay">Gameplay</a></li>
@@ -120,53 +158,91 @@
                 </div>
                 <article id="plot">
                     <h2></h2>
+                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
+                    <i class="fas fa-pen edit-icon mobile tablet"></i>
                     <p></p>
                 </article>
                 <article id="gameplay">
                     <div class="box" id="mediabox"></div>
-                    <h2></h2>
+                    <h2>Gameplay</h2>
+                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
+                    <i class="fas fa-pen edit-icon mobile tablet"></i>
                     <p></p>
-                    <h3></h3>
+                    <h3>Game options</h3>
+                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
+                    <i class="fas fa-pen edit-icon mobile tablet"></i>
                     <p></p>
                 </article>
                 <article id="easter-egg">
-                    <h2></h2>
+                    <h2>Easter egg</h2>
+                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
+                    <i class="fas fa-pen edit-icon mobile tablet"></i>
                     <p></p>
                 </article>
                 <article id="references">
-                    <h2></h2>
+                    <h2>References</h2>
+                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
+                    <i class="fas fa-pen edit-icon mobile tablet"></i>
                     <ol>
-                        <li></li>
+                        <li id="ref-1">Hague, James. "The Giant List of Classic Game Programmers".</li>
+                        <li id="ref-2">I break for Arcadians:Entertainment abounds in a gaggle of games, Page 26,
+                            InfoWorld, 27 Jun 1983,</li>
+                        <li id="ref-3"></li>
+                        <li id="ref-4"></li>
+                        <li id="ref-5"></li>
                     </ol>
                 </article>
                 <article id="further-reading">
-                    <h2></h2>
+                    <h2>Further reading</h2>
+                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
+                    <i class="fas fa-pen edit-icon mobile tablet"></i>
                     <ul>
                         <li><a href="#"></a></li>
                     </ul>
                 </article>
                 <article id="external-links">
-                    <h2></h2>
+                    <h2>External links</h2>
+                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
+                    <i class="fas fa-pen edit-icon mobile tablet"></i>
                     <ul>
-                        <li><a href="#"></a></li>
+                        <li><a href="#"><em>Communist Mutants from Space</em>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>at Atari Mania
+                        </li>
                     </ul>
                 </article>
-                <div class="mobile-edited mobile"></div>
-                <nav class="mobile-navigation-related mobile"></nav>
-                <nav class="box desktop-navigation-related desktop"></nav>
+                <nav class="box desktop-navigation-related desktop">
+                    <a id="navigation-related-categories" href="#">Categories:</a>
+                    <a href="#" class="navigation-related-link">1982 video games</a>
+                    <a href="#" class="navigation-related-link">Alien invasions in video games</a>
+                    <a href="#" class="navigation-related-link">Atari 2600 games</a>
+                    <a href="#" class="navigation-related-link">Atari 2600-only games</a>
+                    <a href="#" class="navigation-related-link">Cold War video games</a>
+                    <a href="#" class="navigation-related-link">Fixed shooters</a>
+                    <a href="#" class="navigation-related-link">North America-exclusive video games</a>
+                    <a href="#" class="navigation-related-link">Starpath games</a>
+                    <a href="#" class="navigation-related-link">Video games developed in the United States</a>
+                </nav>
+                <section class="mobile-last-section mobile">
+                    <div class="mobile-edited mobile"></div>
+                    <nav class="mobile-navigation-related mobile"></nav>
+                </section>
             </div>
 
         </main>
 
         <footer>
-            <small class="mobile-footer-text mobile footer-text"></small>
-            <small class="desktop-footer-text desktop footer-text"></small>
-            <small class="desktop-footer-text desktop footer-text"></small>
-            <a class="mobile-footer-link mobile footer-link" href=""></a>
-            <a class="desktop-footer-link desktop footer-link" href=""></a>
-            <a class="footer-link" href=""></a>
-            <img class="desktop-footer-img desktop" src="" alt="">
-            <img class="desktop-footer-img desktop" src="" alt="">
+            <div class="footer-wrapper">
+                <p id="mobile-footer-wikipedia-sign mobile footer-wikipedia-sign">Wikipedia</p>
+                <small class="mobile-footer-text mobile footer-text"></small>
+                <small class="desktop-footer-text desktop footer-text"></small>
+                <small class="desktop-footer-text desktop footer-text"></small>
+                <a class="mobile-footer-link mobile footer-link" href=""></a>
+                <a class="desktop-footer-link desktop footer-link" href=""></a>
+                <a class="footer-link" href=""></a>
+                <img class="desktop-footer-img desktop" src="" alt="">
+                <img class="desktop-footer-img desktop" src="" alt="">
+            </div>
         </footer>
 
     </div>
