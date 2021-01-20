@@ -1,0 +1,36 @@
+/* ===== GENERAL STYLES ===== */
+
+
+
+/* ===== HEADER STYLES ===== */
+
+
+
+/* ===== CONTENT STYLES ===== */
+
+
+
+/* References */
+
+
+
+/* ===== COMPONENT STYLES ===== */
+
+
+
+/* ===== FOOTER STYLES ===== */
+
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Media query breakpoints:
+Small devices: less than 720px – mobile-first development applied default
+Medium devices: @720px (tablets portrait orientation)
+Large devices: @900px (tablets landscape orientation)
+Extra large devices: @1025px (desktop)  */
+
+@media (min-width: 720px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1025px) {}
