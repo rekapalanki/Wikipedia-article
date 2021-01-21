@@ -1,6 +1,49 @@
 /* ===== GENERAL STYLES ===== */
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
+html {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.desktop {
+    display: none;
+}
+
+.desktop-sidebar-header {
+    position: absolute;
+    top: 0;
+    width: 178px;
+    height: 123px;
+    background-color: hsla(120,100%,75%,0.3);
+}
+
+.desktop-sidebar {
+    position: absolute;
+    top: 123px;
+    width: 178px;
+    min-height: calc(100vh - 123px);
+    background-color: hsla(200,100%,75%,0.3);
+}
+
+.desktop-header {
+    position: absolute;
+    top: 0;
+    left: 178px;
+    width: calc(100% - 178px); 
+    height: 123px;
+    background-color: hsla(200,100%,75%,0.3);
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 123px;
+    left: 178px;
+    background-color: hsla(120,100%,75%,0.3);
+}
 
 /* ===== HEADER STYLES ===== */
 
@@ -25,12 +68,24 @@
 
 /* Media query breakpoints:
 Small devices: less than 720px – mobile-first development applied default
-Medium devices: @720px (tablets portrait orientation)
-Large devices: @900px (tablets landscape orientation)
+Medium devices: @720 (tablets portrait orientation)
+Large devices: @992 (tablets landscape orientation)
 Extra large devices: @1025px (desktop)  */
 
 @media (min-width: 720px) {}
 
 @media (min-width: 992px) {}
 
-@media (min-width: 1025px) {}
+@media (min-width: 1025px) {
+
+    .desktop {
+        display: inline-block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+
+
+}
