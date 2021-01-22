@@ -49,6 +49,7 @@ html {
 body {
     font-family: sans-serif;
     font-size: 0.875rem;
+    letter-spacing: -.5px;
 }
 
 strong {
@@ -62,7 +63,7 @@ em {
 sup {
     display: inline-block;
     vertical-align: super;
-    font-size: smaller;
+    font-size: 75%;
     line-height: 0;
 }
 
@@ -71,27 +72,37 @@ h1,h2 {
 }
 
 h1 {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     font-style: italic;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-style: bold;
+    width: 100%;
 }
 
 h3 {
-    padding: 1rem;
-    font-size: 1.4rem;
-    font-style: bold;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 small, .box {
-    font-size: .8rem;
+    font-size: .75rem;
 }
 
-p, .box {
-    line-height: 1.6;
+p, .box, ol {
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: #0645bf;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* ===== HEADER STYLES ===== */
@@ -103,7 +114,7 @@ p, .box {
 /* ===== CONTENT STYLES ===== */
 
 .main-content-wrapper {
-    padding: 1rem;
+    padding: 0 1.6rem;
 }
 
 section, article {
@@ -119,38 +130,75 @@ section, article {
     font-size: .75rem;
 }
 
+/* Lists */
+
+ol { 
+    counter-reset: item;
+    font-size: 0.75rem;
+}
+
+li {
+    display: block;
+}
+
+ol ol li {
+    margin-left: 40px;
+}
+
+li:before {
+    content: counters(item, ".") ". "; 
+    counter-increment: item;
+}
+
 /* References */
 
 
 
 /* ===== COMPONENT STYLES ===== */
 
-.box, #contents {
+.box {
     padding: .5rem;
     border: 1px solid #a2a9b1;
     background-color: #f6f6f6;
 }
 
-.contents-wrapper {
-    border: 1px solid #a2a9b1;
-    width: 100%;
-    height: fit-content;
-}
-
-#contents, #mediabox {
-    margin: .5rem .5rem .5rem 0rem;
-}
+/* Infobox */
 
 #infobox {
     margin-left: .5rem;
+    width: 250px;
+    text-align: center;
 }
 
-figcaption {
+.infobox-heading {
+    padding-bottom: .5rem;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    font-size: .75rem;
+}
+
+/* Contents */
+
+.contents-wrapper {
+    height: 215px;
+    width: calc(100% - 330px);
+}
+
+.contents-title {
+    text-align: center;
+}
+
+/* Mediabox */
+
+#mediabox {
+    margin: .5rem .5rem .5rem 0rem;
+}
+
+#mediabox figcaption {
     max-width: 180px;
-}
-
-ol {
-    list-style: decimal inside;
 }
 
 /* Sidebar styles */
