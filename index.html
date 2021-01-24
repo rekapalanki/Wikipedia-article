@@ -55,7 +55,9 @@
         <div class="desktop-sidebar desktop">
             <figure class="logo">
                 <img src="./public/Wikipedia-logo-v2.svg" alt="wikipedia-logo">
-                <p class="wikipedia-sign">Wikipedia</p>
+                <p class="wikipedia-sign">
+                    <span class="initiale">W</span>ikipedi<span class="initiale">A</span>
+                </p>
                 <p class="wikipedia-sign-tagline">The Free Encyclopedia</p>
             </figure>
             <nav class="sidebar-navigation-wrapper">
@@ -92,11 +94,15 @@
                     <a href="" class="sidebar-navigation-link">Printable version</a>
                 </div>
                 <div class="navigation-content" id="navigation-languages">
-                    <p class="sidebar-heading">Languages</p><i id="language-settings-button" class="fas fa-cog"></i>
+                    <p class="sidebar-heading">
+                        Languages
+                        <span><i id="language-settings-button" class="fas fa-cog"></i></span>
+                    </p>
+
                     <a href="" class="sidebar-navigation-link">Español</a>
                 </div>
                 <div class="navigation-content" id="edit-links">
-                    <p id="edit-links-item"><i class="fas fa-pen">Edit links</i></p>
+                    <p id="edit-links-item" class="grey"><i class="fas fa-pen grey"></i>Edit links</p>
                 </div>
             </nav>
         </div>
@@ -119,20 +125,23 @@
                 <a href="#" class="account-line">Log in</a>
             </div>
             <div class="edit-line">
-                <a href="https://en.wikipedia.org/wiki/Communist_Mutants_from_Space" class="active-edit-tab grey left"
-                    id="article">Article</a>
-                <a href="https://en.wikipedia.org/wiki/Talk:Communist_Mutants_from_Space" class="edit-tab left"
-                    id="talk">Talk</a>
+                <a class="active-edit-tab grey left" id="article"
+                    href="https://en.wikipedia.org/wiki/Communist_Mutants_from_Space">Article</a>
+                <a class="edit-tab left" id="talk"
+                    href="https://en.wikipedia.org/wiki/Talk:Communist_Mutants_from_Space">Talk</a>
                 <div class="searchbar right" id="search">
                     <input type="text" placeholder="Search Wikipedia">
                     <i class="fas fa-search"></i>
                 </div>
-                <a href="https://en.wikipedia.org/w/index.php?title=Communist_Mutants_from_Space&action=history"
-                    class="edit-tab right" id="history">View history</a>
-                <a href="https://en.wikipedia.org/w/index.php?title=Communist_Mutants_from_Space&action=edit"
-                    class="edit-tab right" id="edit">Edit</a>
-                <a href="https://en.wikipedia.org/wiki/Communist_Mutants_from_Space" class="active-edit-tab grey right"
-                    id="read">Read</a>
+                <a class="edit-tab right" id="history"
+                    href="https://en.wikipedia.org/w/index.php?title=Communist_Mutants_from_Space&action=history">View
+                    history</a>
+                <a class="edit-tab right" id="edit"
+                    href="https://en.wikipedia.org/w/index.php?title=Communist_Mutants_from_Space&action=edit">Edit</a>
+                <a class="active-edit-tab grey right" id="read"
+                    href="https://en.wikipedia.org/wiki/Communist_Mutants_from_Space">
+                    Read
+                </a>
             </div>
         </div>
 

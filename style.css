@@ -20,7 +20,7 @@ html {
     top: 0;
     width: 160px;
     height: 80px;
-    background: linear-gradient(#fff,#a7d7f9);
+    background: linear-gradient(#fff 50%,#a7d7f9);
 }
 
 .desktop-sidebar-header {
@@ -37,7 +37,6 @@ html {
     top: 80px;
     width: 160px;
     min-height: calc(100vh - 80px);
-    border-right: 1px solid #a7d7f9;
     background-color: #f6f6f6;
 }
 
@@ -60,6 +59,7 @@ body {
     font-family: sans-serif;
     font-size: 0.875rem;
     letter-spacing: -.5px;
+    background-color: #f6f6f6;
 }
 
 strong {
@@ -77,7 +77,7 @@ sup {
     line-height: 0;
 }
 
-h1,h2 {
+h1, h2, .wikipedia-sign, .wikipedia-sign-tagline {
     font-family: 'Georgia','Times',serif; 
 }
 
@@ -115,11 +115,71 @@ a:hover {
     text-decoration: underline;
 }
 
+/* ===== SIDEBAR STYLES ===== */
+
+.desktop-sidebar {
+    padding: .5rem 1.5rem 0;
+}
+
+.sidebar-navigation-wrapper, .logo {
+    transform: translate(0,-80px);
+}
+
+.logo {
+    margin-bottom: 2rem;
+}
+
+.wikipedia-sign {
+    width: 100%;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.initiale {
+    font-size: 1.5rem;
+}
+
+.wikipedia-sign-tagline {
+    font-size: .75rem;
+}
+
+.sidebar-navigation-wrapper {
+    font-size: .75rem;
+    letter-spacing: .3px;
+    line-height: 1.3rem;
+}
+
+.sidebar-navigation-link {
+    display: block;
+}
+
+.navigation-content {
+    padding-bottom: 1rem;
+}
+
+.sidebar-heading {
+    color: #54595d;
+    background-image: linear-gradient(to right,rgba(200,204,209,0) 0,#c8ccd1 33%,#c8ccd1 66%,rgba(200,204,209,0) 100%);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+
+#language-settings-button, #edit-links {
+    float: right;
+}
+
+.fa-pen {
+    padding-right: 3px;
+}
+
 /* ===== HEADER STYLES ===== */
 
 .desktop-header {
     position: relative;
     font-size: .75rem;
+    border-bottom: 1px solid #a7d7f9;
+    letter-spacing: 0;
 }
 
 .left {
@@ -153,6 +213,7 @@ a:hover {
 
 .edit-tab, .active-edit-tab {
     padding: 1rem .5rem;
+    transform: translate(0,1px);     /* No border below active-edit-tab */
 }
 
 .edit-tab {
@@ -161,6 +222,7 @@ a:hover {
 
 .active-edit-tab {
     background-color: #fff;
+    border-bottom: 1px solid #fff;     /* No border below active-edit-tab */
 }
 
 #read {
@@ -206,6 +268,8 @@ input {
 
 .main-content-wrapper {
     padding: 0 1.6rem;
+    background-color: #fff;
+    border-left: 1px solid #a7d7f9;
 }
 
 section, article {
@@ -292,10 +356,6 @@ table {
     max-width: 180px;
 }
 
-/* Sidebar styles */
-
-
-
 /* ===== FOOTER STYLES ===== */
 
 
@@ -325,7 +385,6 @@ Extra large devices: @1025px (desktop)  */
         position: absolute;
         left: 160px;
         top: 80px;
-        background-color: hsla(120,100%,75%,0.3);
     }
 
 
