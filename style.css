@@ -20,7 +20,6 @@ html {
     top: 0;
     width: 160px;
     height: 80px;
-    background: linear-gradient(#fff 50%,#a7d7f9);
 }
 
 .desktop-sidebar-header {
@@ -29,7 +28,6 @@ html {
     width: 160px;
     height: 80px;
     background: linear-gradient(#fff 50%,#f6f6f6);
-    transform: translate(-1px,0);
 }
 
 .desktop-sidebar {
@@ -37,7 +35,6 @@ html {
     top: 80px;
     width: 160px;
     min-height: calc(100vh - 80px);
-    background-color: #f6f6f6;
 }
 
 .desktop-header {
@@ -58,7 +55,6 @@ html {
 body {
     font-family: sans-serif;
     font-size: 0.875rem;
-    letter-spacing: -.5px;
     background-color: #f6f6f6;
 }
 
@@ -141,6 +137,7 @@ a:hover {
 
 .wikipedia-sign-tagline {
     font-size: .75rem;
+    letter-spacing: -.03rem;
 }
 
 .sidebar-navigation-wrapper {
@@ -233,6 +230,10 @@ a:hover {
     border-right: 1px solid #a7d7f9;
 }
 
+#article {
+    border-left: 1px solid #a7d7f9;
+}
+
 .searchbar {
     position: relative;
     bottom: 0;
@@ -264,6 +265,10 @@ input {
     padding: .3rem;
 }
 
+.fa-external-link-alt {
+    font-size: .6rem;
+}
+
 /* ===== CONTENT STYLES ===== */
 
 .main-content-wrapper {
@@ -283,31 +288,37 @@ section, article {
 .desktop-brackets {
     font-family: sans-serif;
     font-size: .75rem;
+    font-weight: normal;
 }
 
 /* Lists */
 
 ol { 
     counter-reset: item;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
 li {
+    padding-left: 10px;
+}
+
+.list-item {
     display: block;
+    padding-left: 20px;
 }
 
 ol ol li {
     margin-left: 40px;
 }
 
-li:before {
+.list-item:before {
     content: counters(item, ".") ". "; 
     counter-increment: item;
 }
 
-/* References */
-
-
+.dotted-list-item {
+    list-style: disc inside;
+}
 
 /* ===== COMPONENT STYLES ===== */
 
@@ -356,8 +367,43 @@ table {
     max-width: 180px;
 }
 
+/* Navigation box */
+
+.desktop-navigation-related {
+    font-size: .875rem;
+    margin-bottom: 1.5rem;
+}
+
+.navigation-related-link {
+    border-right: .5px solid #a2a9b1;
+    padding-right: 6px;
+    padding-left: 3px;
+}
+
+
 /* ===== FOOTER STYLES ===== */
 
+footer {
+    padding: 1.5rem;
+    border-top: 1px solid #a7d7f9;
+    font-size: .75rem;
+    letter-spacing: 0;
+}
+
+.desktop-footer-text {
+    padding-bottom: 1rem;
+    line-height: 1rem;
+}
+
+.desktop-footer-link {
+    padding-right: 1rem;
+}
+
+.desktop-footer-img {
+    padding-top: .5rem;
+    padding-right: .3rem;
+    float: right;
+}
 
 /* ===== MEDIA QUERIES ===== */
 
@@ -381,7 +427,7 @@ Extra large devices: @1025px (desktop)  */
         display: none;
     }
 
-    .main-content-wrapper {
+    .content-and-footer-wrapper {
         position: absolute;
         left: 160px;
         top: 80px;
