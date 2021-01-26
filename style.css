@@ -9,11 +9,19 @@ html {
     box-sizing: inherit;
 }
 
-.desktop {
+.desktop, .hr-desktop {
     display: none;
 }
 
 /* Page layout */
+
+.mobile-header-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+}
 
 .desktop-sidebar-header-wrapper {
     position: absolute;
@@ -46,15 +54,15 @@ html {
     background-image: linear-gradient(#fff 50%,#f6f6f6);
 }
 
-.content-wrapper {
-
+.content-and-footer-wrapper {
+    position: absolute;
+    top: 2.5rem;
 }
 
 /* Basic styles and typography */
 
 body {
-    font-family: sans-serif;
-    font-size: 0.875rem;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Lato','Helvetica','Arial',sans-serif;
     background-color: #f6f6f6;
 }
 
@@ -112,6 +120,56 @@ a:hover {
 }
 
 /* ===== SIDEBAR STYLES ===== */
+
+/* Mobile sidebar */
+
+aside {
+    position: relative;
+}
+
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #EAECF0;
+    box-shadow: 0 0 5px;
+}
+
+.mobile-navigation-content {
+    margin-bottom: 1rem;
+}
+
+.mobile-sidebar-navigation-link {
+    display: block;
+    padding: 1rem;
+    font-size: .875rem;
+    font-weight: bold;
+    background-color: #fff;
+    color: #54595d;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.mobile-about {
+    padding-top: 1rem;
+}
+
+.mobile-about-list li {
+    display: inline-block;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+.mobile-sidebar {     /* Toggle display */
+    display: none;
+}
+
+.displayed {
+    display: inline-block;
+}
+
+/* Desktop sidebar */
 
 .desktop-sidebar {
     padding: .5rem 1.5rem 0;
@@ -171,6 +229,34 @@ a:hover {
 }
 
 /* ===== HEADER STYLES ===== */
+
+/* Mobile header */
+
+.mobile-header-wrapper {
+    background-color: #eaecf0;
+}
+
+.mobile-header {
+    position: absolute;
+    margin: .5rem 1.6rem;
+}
+
+.mobile-header-button {
+    top: 0;
+    left: 0;
+}
+
+.mobile-header-wikipedia-sign {
+    top: 0;
+    left: 4rem;
+}
+
+.mobile-search-icon {
+    top: 0;
+    right: 0;
+}
+
+/* Desktop header */
 
 .desktop-header {
     position: relative;
@@ -277,13 +363,28 @@ input {
     border-left: 1px solid #a7d7f9;
 }
 
-section, article {
+section, article, .heading-wrapper {
     padding: 1rem 0;
 }
 
-#paragraph-summary {
-    padding-top: 0;
+.article-wrapper {
+    position: relative;
 }
+
+/* Mobile content */
+
+.mobile-heading-icons {
+    border-top: .5px solid #54595d;
+    border-bottom: .5px solid #54595d;
+}
+
+.heading-icon {
+    transform: translate(0,-.5rem);
+    padding-right: 1rem;
+    color: #54595d;
+}
+
+/* Desktop content */
 
 .desktop-brackets {
     font-family: sans-serif;
@@ -304,7 +405,6 @@ li {
 
 .list-item {
     display: block;
-    padding-left: 20px;
 }
 
 ol ol li {
@@ -349,8 +449,7 @@ table {
 /* Contents */
 
 .contents-wrapper {
-    height: 215px;
-    width: calc(100% - 330px);
+    display: none;
 }
 
 .contents-title {
@@ -413,11 +512,24 @@ Medium devices: @720 (tablets portrait orientation)
 Large devices: @992 (tablets landscape orientation)
 Extra large devices: @1025px (desktop)  */
 
-@media (min-width: 720px) {}
+@media (min-width: 720px) {
+ 
+    .mobile-sidebar {
+        width: 340px;
+    }
+
+}
 
 @media (min-width: 992px) {}
 
 @media (min-width: 1025px) {
+
+    body {
+        font-family: sans-serif;
+        font-size: 0.875rem;
+    }
+
+    /* Display */
 
     .desktop {
         display: inline-block;
@@ -427,10 +539,25 @@ Extra large devices: @1025px (desktop)  */
         display: none;
     }
 
+    .hr-desktop {
+        display: block;
+    }
+
+    /* Content styles */
+
     .content-and-footer-wrapper {
         position: absolute;
         left: 160px;
         top: 80px;
+    }
+
+    .heading-wrapper {
+        padding-bottom: 0;
+    }
+
+    #paragraph-summary {
+        width: calc(100% - 250px);
+        padding-right: .5rem;
     }
 
 
@@ -438,6 +565,13 @@ Extra large devices: @1025px (desktop)  */
 
     #infobox {
         float: right;
+        transform: translate(0,-100px);
+    }
+
+    .contents-wrapper {
+        display: inline-block;
+        height: 215px;
+        width: calc(100% - 330px);
     }
 
     #contents, #mediabox {
