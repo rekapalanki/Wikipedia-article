@@ -1,14 +1,309 @@
 /* ===== GENERAL STYLES ===== */
 
+html {
+    box-sizing: border-box;
+    position: relative;
+}
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.desktop {
+    display: none;
+}
+
+/* Page layout */
+
+.desktop-sidebar-header-wrapper {
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 80px;
+    background: linear-gradient(#fff 50%,#a7d7f9);
+}
+
+.desktop-sidebar-header {
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 80px;
+    background: linear-gradient(#fff 50%,#f6f6f6);
+    transform: translate(-1px,0);
+}
+
+.desktop-sidebar {
+    position: absolute;
+    top: 80px;
+    width: 160px;
+    min-height: calc(100vh - 80px);
+    background-color: #f6f6f6;
+}
+
+.desktop-header {
+    position: absolute;
+    top: 0;
+    left: 160px;
+    width: calc(100% - 160px); 
+    height: 80px;
+    background-image: linear-gradient(#fff 50%,#f6f6f6);
+}
+
+.content-wrapper {
+
+}
+
+/* Basic styles and typography */
+
+body {
+    font-family: sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: -.5px;
+    background-color: #f6f6f6;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+sup {
+    display: inline-block;
+    vertical-align: super;
+    font-size: 75%;
+    line-height: 0;
+}
+
+h1, h2, .wikipedia-sign, .wikipedia-sign-tagline {
+    font-family: 'Georgia','Times',serif; 
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-style: bold;
+    width: 100%;
+}
+
+h3 {
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+small, .box {
+    font-size: .75rem;
+}
+
+p, .box, ol {
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: #0645bf;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== SIDEBAR STYLES ===== */
+
+.desktop-sidebar {
+    padding: .5rem 1.5rem 0;
+}
+
+.sidebar-navigation-wrapper, .logo {
+    transform: translate(0,-80px);
+}
+
+.logo {
+    margin-bottom: 2rem;
+}
+
+.wikipedia-sign {
+    width: 100%;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.initiale {
+    font-size: 1.5rem;
+}
+
+.wikipedia-sign-tagline {
+    font-size: .75rem;
+}
+
+.sidebar-navigation-wrapper {
+    font-size: .75rem;
+    letter-spacing: .3px;
+    line-height: 1.3rem;
+}
+
+.sidebar-navigation-link {
+    display: block;
+}
+
+.navigation-content {
+    padding-bottom: 1rem;
+}
+
+.sidebar-heading {
+    color: #54595d;
+    background-image: linear-gradient(to right,rgba(200,204,209,0) 0,#c8ccd1 33%,#c8ccd1 66%,rgba(200,204,209,0) 100%);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+
+#language-settings-button, #edit-links {
+    float: right;
+}
+
+.fa-pen {
+    padding-right: 3px;
+}
 
 /* ===== HEADER STYLES ===== */
 
+.desktop-header {
+    position: relative;
+    font-size: .75rem;
+    border-bottom: 1px solid #a7d7f9;
+    letter-spacing: 0;
+}
 
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.grey {
+    color: #54595d;
+}
+
+.account-line-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+}    
+
+.account-line {
+    padding-right: .2rem;
+}    
+
+.edit-line {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}    
+
+.edit-tab, .active-edit-tab {
+    padding: 1rem .5rem;
+    transform: translate(0,1px);     /* No border below active-edit-tab */
+}
+
+.edit-tab {
+    background-image: linear-gradient(#fff 25%,#d5eeff);
+}
+
+.active-edit-tab {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;     /* No border below active-edit-tab */
+}
+
+#read {
+    border-left: 1px solid #a7d7f9;
+}
+
+#article, #talk, #read, #edit, #history {
+    border-right: 1px solid #a7d7f9;
+}
+
+.searchbar {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-left: .5rem;
+    margin-right: 1rem;
+    margin-top: .5rem;
+    width: 22%;
+    border: 1px solid #a2a9b1;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.searchbar:hover {
+    border: 1px solid #0645bf;
+    transition: border 0.5s ease 0s;
+}
+
+input {
+    padding: .3rem;
+    font-size: .75rem;
+    border: none;
+    outline: none;
+    background-color: rgba(250,250,250,);
+}
+
+.fa-search {
+    float: right;
+    padding: .3rem;
+}
 
 /* ===== CONTENT STYLES ===== */
 
+.main-content-wrapper {
+    padding: 0 1.6rem;
+    background-color: #fff;
+    border-left: 1px solid #a7d7f9;
+}
 
+section, article {
+    padding: 1rem 0;
+}
+
+#paragraph-summary {
+    padding-top: 0;
+}
+
+.desktop-brackets {
+    font-family: sans-serif;
+    font-size: .75rem;
+}
+
+/* Lists */
+
+ol { 
+    counter-reset: item;
+    font-size: 0.75rem;
+}
+
+li {
+    display: block;
+}
+
+ol ol li {
+    margin-left: 40px;
+}
+
+li:before {
+    content: counters(item, ".") ". "; 
+    counter-increment: item;
+}
 
 /* References */
 
@@ -16,7 +311,50 @@
 
 /* ===== COMPONENT STYLES ===== */
 
+.box {
+    padding: .5rem;
+    border: 1px solid #a2a9b1;
+    background-color: #f6f6f6;
+}
 
+/* Infobox */
+
+#infobox {
+    margin-left: .5rem;
+    width: 250px;
+    text-align: center;
+}
+
+.infobox-heading {
+    padding-bottom: .5rem;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    font-size: .75rem;
+}
+
+/* Contents */
+
+.contents-wrapper {
+    height: 215px;
+    width: calc(100% - 330px);
+}
+
+.contents-title {
+    text-align: center;
+}
+
+/* Mediabox */
+
+#mediabox {
+    margin: .5rem .5rem .5rem 0rem;
+}
+
+#mediabox figcaption {
+    max-width: 180px;
+}
 
 /* ===== FOOTER STYLES ===== */
 
@@ -25,12 +363,39 @@
 
 /* Media query breakpoints:
 Small devices: less than 720px – mobile-first development applied default
-Medium devices: @720px (tablets portrait orientation)
-Large devices: @900px (tablets landscape orientation)
+Medium devices: @720 (tablets portrait orientation)
+Large devices: @992 (tablets landscape orientation)
 Extra large devices: @1025px (desktop)  */
 
 @media (min-width: 720px) {}
 
 @media (min-width: 992px) {}
 
-@media (min-width: 1025px) {}
+@media (min-width: 1025px) {
+
+    .desktop {
+        display: inline-block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .main-content-wrapper {
+        position: absolute;
+        left: 160px;
+        top: 80px;
+    }
+
+
+    /* Component styles */
+
+    #infobox {
+        float: right;
+    }
+
+    #contents, #mediabox {
+        float: left;
+    }
+    
+}

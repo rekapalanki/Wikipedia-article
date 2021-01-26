@@ -24,6 +24,7 @@
 <body>
 
     <aside>
+
         <div class="mobile-sidebar mobile">
             <div class="mobile-navigation-content mobile">
                 <a href="#" class="mobile-sidebar-navigation-link">Home</a>
@@ -46,11 +47,17 @@
                 </ul>
             </div>
         </div>
-        <div class="desktop-sidebar-header desktop"></div>
+
+        <div class="desktop-sidebar-header-wrapper desktop">
+            <div class="desktop-sidebar-header"></div>
+        </div>
+
         <div class="desktop-sidebar desktop">
             <figure class="logo">
                 <img src="./public/Wikipedia-logo-v2.svg" alt="wikipedia-logo">
-                <p class="wikipedia-sign">Wikipedia</p>
+                <p class="wikipedia-sign">
+                    <span class="initiale">W</span>ikipedi<span class="initiale">A</span>
+                </p>
                 <p class="wikipedia-sign-tagline">The Free Encyclopedia</p>
             </figure>
             <nav class="sidebar-navigation-wrapper">
@@ -87,14 +94,19 @@
                     <a href="" class="sidebar-navigation-link">Printable version</a>
                 </div>
                 <div class="navigation-content" id="navigation-languages">
-                    <p class="sidebar-heading">Languages</p><i id="language-settings-button" class="fas fa-cog"></i>
+                    <p class="sidebar-heading">
+                        Languages
+                        <span><i id="language-settings-button" class="fas fa-cog"></i></span>
+                    </p>
+
                     <a href="" class="sidebar-navigation-link">Español</a>
                 </div>
                 <div class="navigation-content" id="edit-links">
-                    <p id="edit-links-item"><i class="fas fa-pen">Edit links</i></p>
+                    <p id="edit-links-item" class="grey"><i class="fas fa-pen grey"></i>Edit links</p>
                 </div>
             </nav>
         </div>
+
     </aside>
 
     <head>
@@ -103,89 +115,166 @@
             <p id="mobile-header-wikipedia-sign mobile mobile-header header-wikipedia-sign">Wikipedia</p>
             <i class="fas fa-search" class="mobile-search-icon mobile mobile-header"></i>
         </div>
+
         <div class="desktop-header desktop">
             <div class="account-line-wrapper">
-                <a href="#" class="account-line"><i class="fas fa-user"></i> Not logged in</a>
+                <a href="#" class="account-line grey"><i class="fas fa-user"></i> Not logged in</a>
                 <a href="#" class="account-line">Talk</a>
                 <a href="#" class="account-line">Contributions</a>
                 <a href="#" class="account-line">Create account</a>
                 <a href="#" class="account-line">Log in</a>
             </div>
             <div class="edit-line">
-                <a class="active-edit-tab">Article</a>
-                <a class="edit-tab">Talk</a>
-                <a class="active-edit-tab">Read</a>
-                <a class="edit-tab">Edit</a>
-                <a class="edit-tab">View history</a>
-                <div class="searchbar">Search Wikipedia <i class="fas fa-search"></i></div>
+                <a class="active-edit-tab grey left" id="article"
+                    href="https://en.wikipedia.org/wiki/Communist_Mutants_from_Space">Article</a>
+                <a class="edit-tab left" id="talk"
+                    href="https://en.wikipedia.org/wiki/Talk:Communist_Mutants_from_Space">Talk</a>
+                <div class="searchbar right" id="search">
+                    <input type="text" placeholder="Search Wikipedia">
+                    <i class="fas fa-search"></i>
+                </div>
+                <a class="edit-tab right" id="history"
+                    href="https://en.wikipedia.org/w/index.php?title=Communist_Mutants_from_Space&action=history">View
+                    history</a>
+                <a class="edit-tab right" id="edit"
+                    href="https://en.wikipedia.org/w/index.php?title=Communist_Mutants_from_Space&action=edit">Edit</a>
+                <a class="active-edit-tab grey right" id="read"
+                    href="https://en.wikipedia.org/wiki/Communist_Mutants_from_Space">
+                    Read
+                </a>
             </div>
         </div>
+
     </head>
 
-    <div class="content-wrapper">
+    <div class="main-content-wrapper">
 
         <main class="main-content">
 
             <section class="heading-section">
                 <h1 class="headline">Communist Mutants from Space</h1>
-                <p class="desktop-tagline desktop">From Wikipedia, the free encyclopedia</p>
+                <hr>
+                <p class="desktop-tagline desktop"><small>From Wikipedia, the free encyclopedia</small></p>
                 <p class="desktop-reference-line desktop"></p>
                 <nav class="mobile-icons mobile"></nav>
             </section>
 
             <div class="article-wrapper">
-                <div class="box" id="infobox"></div>
-                <section class="paragraph-summary"><em><strong>Communist Mutants from Space</strong></em> is a
-                    <a href="https://en.wikipedia.org/wiki/Fixed_shooter">fixed shooter</a> video game programmed by
-                    Stephen H. Landrum for the <a href="https://en.wikipedia.org/wiki/Atari_2600">Atari 2600</a> with
-                    the <a href="https://en.wikipedia.org/wiki/Starpath_Supercharger">Starpath Supercharger</a> cassette
-                    accessory. It was published in 1982 by <a href="https://en.wikipedia.org/wiki/Starpath">Starpath</a>
-                    (formerly Arcadia). <sup><a href="#cite-ref-2" id="cite-note-2">[2]</a></sup> The game is similar to
-                    <em><a href="https://en.wikipedia.org/wiki/Galaxian">Galaxian</a></em>,
-                    <sup><a href="#cite-ref-3" id="cite-note-3">[3]</a></sup> adding a variety of gameplay-changing
-                    options.
+                <div class="box" id="infobox">
+                    <p class="infobox-heading"><strong><em>Communist Mutants from Space</em></strong></p>
+                    <figure>
+                        <img src="./public/220px-Communist_Mutants_from_Space_cover.jpg" alt="game cover">
+                        <figcaption><small>Cover art</small></figcaption>
+                    </figure>
+                    <table>
+                        <tr>
+                            <td>Developer(s)</td>
+                            <td>Starpath</td>
+                        </tr>
+                        <tr>
+                            <td>Publisher(s)</td>
+                            <td>Starpath</td>
+                        </tr>
+                        <tr>
+                            <td>Programmer(s)</td>
+                            <td>Stephen H. Landrum[1]</td>
+                        </tr>
+                        <tr>
+                            <td>Platform(s)</td>
+                            <td>Atari 2600</td>
+                        </tr>
+                        <tr>
+                            <td>Release</td>
+                            <td>NA: 1982</td>
+                        </tr>
+                        <tr>
+                            <td>Genre(s)</td>
+                            <td>Fixed shooter</td>
+                        </tr>
+                        <tr>
+                            <td>Mode(s)</td>
+                            <td>Single player</td>
+                        </tr>
+                    </table>
+                </div>
+                <section id="paragraph-summary">
+                    <p><em><strong>Communist Mutants from Space</strong></em>
+                        is a <a href="https://en.wikipedia.org/wiki/Fixed_shooter">fixed shooter</a> video game
+                        programmed by Stephen H. Landrum for the
+                        <a href="https://en.wikipedia.org/wiki/Atari_2600">Atari 2600</a> with the
+                        <a href="https://en.wikipedia.org/wiki/Starpath_Supercharger">Starpath Supercharger</a>
+                        cassette accessory. It was published in 1982 by
+                        <a href="https://en.wikipedia.org/wiki/Starpath">Starpath</a> (formerly Arcadia).<sup>
+                            <a href="#cite-ref-2" id="cite-note-2">[2]</a></sup> The game is similar to
+                        <em><a href="https://en.wikipedia.org/wiki/Galaxian">Galaxian</a></em>,<sup>
+                            <a href="#cite-ref-3" id="cite-note-3">[3]</a></sup> adding a variety of
+                        gameplay-changing
+                        options.
+                    </p>
                 </section>
-                <div class="box" id="contents">
-                    <p class="contents-heading">Contents</p>
-                    <p class="desktop-brackets desktop">[<a href="#">hide</a>]</p>
-                    <ol>
-                        <li>Plot</li>
-                        <li><a href="gameplay">Gameplay</a></li>
-                        <li><a href="easter-egg">Easter egg</a></li>
-                        <li><a href="references">References</a></li>
-                        <li><a href="#further-reading">Further reading</a></li>
-                        <li><a href="#external-links">External links</a></li>
-                    </ol>
+                <div class="contents-wrapper">
+                    <div class="box" id="contents">
+                        <input type="checkbox" class="mobile-checkbox mobile">
+                        <p class="contents-title">
+                            <strong>Contents</strong>
+                            <span class="desktop-brackets"> [<a href="#">hide</a>]</span>
+                        </p>
+                        <ol>
+                            <li><a href="#plot">Plot</a></li>
+                            <li><a href="#gameplay">Gameplay</a>
+                                <ol>
+                                    <li class="embedded-list">
+                                        <a
+                                            href="https://en.wikipedia.org/wiki/Communist_Mutants_from_Space#Game_options">
+                                            Game options</a>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li><a href="#easter-egg">Easter egg</a></li>
+                            <li><a href="#references">References</a></li>
+                            <li><a href="#further-reading">Further reading</a></li>
+                            <li><a href="#external-links">External links</a></li>
+                        </ol>
+                    </div>
                 </div>
                 <article id="plot">
-                    <h2></h2>
-                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
-                    <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    <h2>
+                        Plot
+                        <span class="desktop-brackets"> [<a href="#">hide</a>]</span>
+                        <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    </h2>
+                    <hr>
                     <p>Aliens from the communist planet of Rooskee are invading peaceful, democratic planets and turning
                         their inhabitants into "Communist Mutants." The communist mutant armies are controlled by the
                         Mother Creature, a strange alien who has gone mad due to irradiated vodka.[4]</p>
                 </article>
                 <article id="gameplay">
+                    <h2>
+                        Gameplay
+                        <span class="desktop-brackets"> [ <a href="#">edit</a> ]</span>
+                        <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    </h2>
+                    <hr>
                     <div class="box" id="mediabox">
                         <figure>
                             <img src="./public/180px-Commiemutants.png" alt="screenshot from game">
-                            <figcaption>Destroy the Mother Creature while avoiding mutants and their bombs.
+                            <figcaption>
+                                <small>Destroy the Mother Creature while avoiding mutants and their bombs.</small>
                                 <i class="fas fa-expand-alt"></i>
                             </figcaption>
                         </figure>
                     </div>
-                    <h2>Gameplay</h2>
-                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
-                    <i class="fas fa-pen edit-icon mobile tablet"></i>
                     <p>The player starts off with three reserve cannons. The object is to destroy the mutants aliens
                         and, most importantly, the Mother Creature. The mutants hatch from moving eggs at the top of the
                         screen. Because the Mother Creature replenishes eggs when they hatch or are destroyed, it must
                         be defeated before the player can advance to the next wave. If a mutant or a bomb thrown by a
                         mutant comes into contact with the cannon, the cannon will be destroyed and a reserve must be
                         called up. A new cannon is awarded on every other wave.</p>
-                    <h3>Game options</h3>
-                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
-                    <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    <h3>
+                        Game options
+                        <span class="desktop-brackets"> [ <a href="#">edit</a> ]</span>
+                        <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    </h3>
                     <p>An in-game menu allows a variety of gameplay changes. The player may toggle the shield option on
                         or off. If activated, "shield" mode allowed a player to press down on the joystick to become
                         invincible for a short period (only one shield was allotted per level). "Time warp" allows the
@@ -197,16 +286,22 @@
                         first joystick while players two and four share the second.</p>
                 </article>
                 <article id="easter-egg">
-                    <h2>Easter egg</h2>
-                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
-                    <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    <h2>
+                        Easter egg
+                        <span class="desktop-brackets"> [ <a href="#">edit</a> ]</span>
+                        <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    </h2>
+                    <hr>
                     <p>Holding fire during power-on of the Atari 2600 causes the "HI" on the high scores screen to
                         change to "SHL", the initials of programmer Stephen H. Landrum.[5]</p>
                 </article>
                 <article id="references">
-                    <h2>References</h2>
-                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
-                    <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    <h2>
+                        References
+                        <span class="desktop-brackets"> [ <a href="#">edit</a> ]</span>
+                        <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    </h2>
+                    <hr>
                     <ol>
                         <li id="cite-ref-1"><a href="#cite-note-1">^</a> Hague, James.
                             <a href="https://dadgum.com/giantlist/">"The Giant List of Classic Game Programmers"
@@ -246,9 +341,12 @@
                     </ol>
                 </article>
                 <article id="further-reading">
-                    <h2>Further reading</h2>
-                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
-                    <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    <h2>
+                        Further reading
+                        <span class="desktop-brackets"> [ <a href="#">edit</a> ]</span>
+                        <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    </h2>
+                    <hr>
                     <ul>
                         <li><a href="https://archive.org/details/TV_Gamer_1984-03_Boytonbrook_GB/page/n38/mode/1up">TV
                                 Gamer, March 1984, p. 41</a>
@@ -257,9 +355,12 @@
                     </ul>
                 </article>
                 <article id="external-links">
-                    <h2>External links</h2>
-                    <p class="desktop-brackets desktop">[<a href="#">edit</a>]</p>
-                    <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    <h2>
+                        External links
+                        <span class="desktop-brackets"> [ <a href="#">edit</a> ]</span>
+                        <i class="fas fa-pen edit-icon mobile tablet"></i>
+                    </h2>
+                    <hr>
                     <ul>
                         <li><a
                                 href="http://www.atarimania.com/game-atari-2600-vcs-communist-mutants-from-space_13667.html">
