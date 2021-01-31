@@ -96,11 +96,11 @@ h3 {
     font-weight: bold;
 }
 
-small, .box {
+small {
     font-size: .75rem;
 }
 
-p, .box, ol {
+p, .desktop-navigation-related, ol {
     line-height: 1.6rem;
 }
 
@@ -466,8 +466,8 @@ ol ol li {
 /* Infobox */
 
 #infobox {
-    margin-left: .5rem;
-    width: 250px;
+    margin: auto;
+    width: 100%;
     text-align: center;
 }
 
@@ -475,10 +475,18 @@ ol ol li {
     padding-bottom: .5rem;
 }
 
+#infobox figcaption {
+    line-height: 1.6rem;
+}
+
 table {
     width: 100%;
     text-align: left;
-    font-size: .75rem;
+}
+
+td {
+    padding: 8px;   
+    line-height: 1.4rem;
 }
 
 /* Contents */
@@ -495,16 +503,26 @@ table {
 
 #mediabox {
     margin: .5rem .5rem .5rem 0rem;
+    border: none;
+    background-color: transparent;
+}
+
+#mediabox figure {
+    text-align: center;
 }
 
 #mediabox figcaption {
     max-width: 180px;
+    margin: auto;
+    line-height: 1.2rem;
+    text-align: left;
+    font-size: .8rem;
+    color: #54595d;
 }
 
 /* Navigation box */
 
 .desktop-navigation-related {
-    font-size: .875rem;
     margin-bottom: 1.5rem;
 }
 
@@ -564,52 +582,70 @@ Extra large devices: @1025px (desktop)  */
         font-family: sans-serif;
         font-size: 0.875rem;
     }
-
-    p, .box, ol {
+    
+    p, ol {
         line-height: 1.4rem;
     }
-
+    
     /* Display */
-
+    
     .desktop {
         display: inline-block;
     }
-
+    
     .mobile {
         display: none;
     }
-
+    
     .hr-desktop {
         display: block;
     }
-
+    
     /* Content styles */
-
+    
     .content-and-footer-wrapper {
         position: absolute;
         left: 160px;
         top: 80px;
     }
-
+    
     .heading-wrapper {
         padding-bottom: 0;
     }
-
+    
     #paragraph-summary {
         width: calc(100% - 250px);
         padding-right: .5rem;
     }
-
+    
     h2 {
         font-size: 1.25rem;
         transform: translate(0,0);
     }
-
+    
     /* Component styles */
+    
+    .box {
+        font-size: .75rem;
+    }
 
     #infobox {
         float: right;
         transform: translate(0,-100px);
+        width: 250px;
+        margin-left: .5rem;
+    }
+    
+    #infobox figcaption, #mediabox figcaption {
+        font-size: .75rem
+    }
+    
+    table {
+        font-size: .75rem;
+    }
+    
+    td {
+        padding: 0;
     }
 
     .contents-wrapper {
@@ -621,5 +657,13 @@ Extra large devices: @1025px (desktop)  */
     #contents, #mediabox {
         float: left;
     }
+
+    #mediabox {
+        border: 1px solid #a2a9b1;
+        background-color: #f6f6f6;
+    }
+
+    .desktop-navigation-related {
+        font-size: .875rem;
     
 }
