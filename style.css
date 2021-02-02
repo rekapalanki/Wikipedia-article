@@ -96,11 +96,11 @@ h3 {
     font-weight: bold;
 }
 
-small, .box {
+small {
     font-size: .75rem;
 }
 
-p, .box, ol {
+p, .desktop-navigation-related, ol {
     line-height: 1.6rem;
 }
 
@@ -369,7 +369,7 @@ input {
 /* ===== CONTENT STYLES ===== */
 
 .main-content-wrapper {
-    padding: 0 1.6rem;
+    padding: .5rem 1.6rem 1rem;
     background-color: #fff;
     border-left: 1px solid #a7d7f9;
 }
@@ -417,6 +417,8 @@ section, article, .heading-wrapper {
 .edit-icon{
     color: #54595d;
     float: right;
+    transform: translate(0,12px);
+    font-size: 1.2rem;
 }
 
 /* Desktop content */
@@ -466,8 +468,8 @@ ol ol li {
 /* Infobox */
 
 #infobox {
-    margin-left: .5rem;
-    width: 250px;
+    margin: auto;
+    width: 100%;
     text-align: center;
 }
 
@@ -475,10 +477,18 @@ ol ol li {
     padding-bottom: .5rem;
 }
 
+#infobox figcaption {
+    line-height: 1.6rem;
+}
+
 table {
     width: 100%;
     text-align: left;
-    font-size: .75rem;
+}
+
+td {
+    padding: 8px;   
+    line-height: 1.4rem;
 }
 
 /* Contents */
@@ -495,16 +505,26 @@ table {
 
 #mediabox {
     margin: .5rem .5rem .5rem 0rem;
+    border: none;
+    background-color: transparent;
+}
+
+#mediabox figure {
+    text-align: center;
 }
 
 #mediabox figcaption {
     max-width: 180px;
+    margin: auto;
+    line-height: 1.2rem;
+    text-align: left;
+    font-size: .8rem;
+    color: #54595d;
 }
 
 /* Navigation box */
 
 .desktop-navigation-related {
-    font-size: .875rem;
     margin-bottom: 1.5rem;
 }
 
@@ -517,7 +537,72 @@ table {
 
 /* ===== FOOTER STYLES ===== */
 
-footer {
+/* Mobile footer */
+
+footer section {
+    padding: 1rem 1.6rem;
+    background-color: #eaecf0;
+}
+
+.mobile-last-edited {
+    border-top: .5px solid #ccc;
+    border-bottom: .5px solid #ccc;
+}
+
+.mobile-last-edited a, .mobile-last-edited i {
+    color: #444;
+}
+
+.lightgrey, #fa-angle-right {
+    color: #777;
+}
+
+.fa-angle-right {
+    float: right;
+    font-size: 1.6rem;
+}
+
+.mobile-related-heading {
+    padding: .5rem 0;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: #444;
+}
+
+.mobile-related-icon, .mobile-related-link {
+    display: inline-block;
+    color: #444;
+}
+
+.related-box {
+    margin-bottom: .5rem;
+    border: .5px solid #ccc;
+    background-color: #fff;
+}
+
+.mobile-related-icon {
+    border-right: .5px solid #ccc;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: #eaecf0;;
+}
+
+.mobile-related-link {
+    padding-left: 1rem;
+    transform: translate(0, -.5rem);
+}
+
+.mobile-copyright-section p {
+    font-size: .8rem;
+}
+
+.mobile-footer-link {
+    padding-right: 1rem;
+}
+
+/* Desktop footer */
+
+.desktop-footer-wrapper {
     padding: 1.5rem;
     border-top: 1px solid #a7d7f9;
     font-size: .75rem;
@@ -564,52 +649,70 @@ Extra large devices: @1025px (desktop)  */
         font-family: sans-serif;
         font-size: 0.875rem;
     }
-
-    p, .box, ol {
+    
+    p, ol {
         line-height: 1.4rem;
     }
-
+    
     /* Display */
-
+    
     .desktop {
         display: inline-block;
     }
-
+    
     .mobile {
         display: none;
     }
-
+    
     .hr-desktop {
         display: block;
     }
-
+    
     /* Content styles */
-
+    
     .content-and-footer-wrapper {
         position: absolute;
         left: 160px;
         top: 80px;
     }
-
+    
     .heading-wrapper {
         padding-bottom: 0;
     }
-
+    
     #paragraph-summary {
         width: calc(100% - 250px);
         padding-right: .5rem;
     }
-
+    
     h2 {
         font-size: 1.25rem;
         transform: translate(0,0);
     }
-
+    
     /* Component styles */
+    
+    .box {
+        font-size: .75rem;
+    }
 
     #infobox {
         float: right;
         transform: translate(0,-100px);
+        width: 250px;
+        margin-left: .5rem;
+    }
+    
+    #infobox figcaption, #mediabox figcaption {
+        font-size: .75rem
+    }
+    
+    table {
+        font-size: .75rem;
+    }
+    
+    td {
+        padding: 0;
     }
 
     .contents-wrapper {
@@ -621,5 +724,13 @@ Extra large devices: @1025px (desktop)  */
     #contents, #mediabox {
         float: left;
     }
+
+    #mediabox {
+        border: 1px solid #a2a9b1;
+        background-color: #f6f6f6;
+    }
+
+    .desktop-navigation-related {
+        font-size: .875rem;
     
 }
