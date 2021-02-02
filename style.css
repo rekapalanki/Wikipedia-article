@@ -537,7 +537,72 @@ td {
 
 /* ===== FOOTER STYLES ===== */
 
-footer {
+/* Mobile footer */
+
+footer section {
+    padding: 1rem 1.6rem;
+    background-color: #eaecf0;
+}
+
+.mobile-last-edited {
+    border-top: .5px solid #ccc;
+    border-bottom: .5px solid #ccc;
+}
+
+.mobile-last-edited a, .mobile-last-edited i {
+    color: #444;
+}
+
+.lightgrey, #fa-angle-right {
+    color: #777;
+}
+
+.fa-angle-right {
+    float: right;
+    font-size: 1.6rem;
+}
+
+.mobile-related-heading {
+    padding: .5rem 0;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: #444;
+}
+
+.mobile-related-icon, .mobile-related-link {
+    display: inline-block;
+    color: #444;
+}
+
+.related-box {
+    margin-bottom: .5rem;
+    border: .5px solid #ccc;
+    background-color: #fff;
+}
+
+.mobile-related-icon {
+    border-right: .5px solid #ccc;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: #eaecf0;;
+}
+
+.mobile-related-link {
+    padding-left: 1rem;
+    transform: translate(0, -.5rem);
+}
+
+.mobile-copyright-section p {
+    font-size: .8rem;
+}
+
+.mobile-footer-link {
+    padding-right: 1rem;
+}
+
+/* Desktop footer */
+
+.desktop-footer-wrapper {
     padding: 1.5rem;
     border-top: 1px solid #a7d7f9;
     font-size: .75rem;
